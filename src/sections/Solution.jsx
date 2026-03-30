@@ -15,20 +15,20 @@ export default function Solution() {
   }
 
   return (
-    <section id="solution" className="section animate-on-scroll">
+    <section id="solution" className="section">
       <div className="container">
         <div className="solution-grid">
-          <div>
+          <div className="animate-from-left">
             <span className="section-label">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
               Die Lösung
             </span>
             <h2>Was ist Aktiv Hypnose?</h2>
-            <p>Aktiv Hypnose nach David Woods ist ein moderner Ansatz, der dich nicht in einen passiven Trance-Zustand versetzt – sondern dich <strong>bewusst und aktiv</strong> in den Heilungsprozess einbindet.</p>
+            <p>Aktiv Hypnose nach der David Woods Methode – dem führenden Ansatz für aktive Hypnose aus dem UK – versetzt dich nicht in einen passiven Trance-Zustand, sondern bindet dich <strong>bewusst und aktiv</strong> in den Heilungsprozess ein.</p>
             <p>Du bleibst jederzeit wach, ansprechbar und behältst die Kontrolle. Gemeinsam arbeiten wir direkt mit deinem Unterbewusstsein, um nachhaltige Veränderungen zu verankern.</p>
-            <a href="#contact" className="btn btn-primary" onClick={scrollTo} style={{ marginTop: '1rem' }}>Mehr erfahren</a>
+            <a href="#contact" className="btn btn-primary" onClick={scrollTo} style={{ marginTop: '1rem' }}>Jetzt kostenloses Gespräch buchen</a>
           </div>
-          <div className="comparison">
+          <div className="comparison animate-from-right">
             <div className="comparison-header">
               <div className="comparison-header-old">Klassische Hypnose</div>
               <div className="comparison-header-new">
@@ -37,7 +37,7 @@ export default function Solution() {
               </div>
             </div>
             {rows.map(([no, yes], i) => (
-              <div key={i} className="comparison-row">
+              <div key={i} className={`comparison-row animate-on-scroll delay-${i + 1}`}>
                 <span className="comparison-no">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
                   {no}

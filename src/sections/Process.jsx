@@ -35,7 +35,7 @@ export default function Process() {
         </div>
         <div className="process-steps">
           {steps.map((s, i) => (
-            <div key={i} className={`process-step animate-on-scroll delay-${i + 1}`}>
+            <div key={i} className={`process-step animate-scale-up delay-${i + 1}`}>
               <div className="process-step-inner">
                 <div className="process-number">{s.n}</div>
                 <div className="process-icon">

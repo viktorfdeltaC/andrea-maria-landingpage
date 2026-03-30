@@ -8,10 +8,10 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="section section--warm animate-on-scroll">
+    <section id="about" className="section section--warm">
       <div className="container">
         <div className="about-grid">
-          <div className="about-image-wrapper">
+          <div className="about-image-wrapper animate-from-left">
             <div className="about-image">
               {/* Replace with: <img src="/images/andrea.jpg" alt="Andrea Maria" /> */}
               <div className="img-placeholder">
@@ -21,13 +21,14 @@ export default function About() {
             </div>
             <div className="about-image-accent" />
           </div>
-          <div>
+          <div className="animate-from-right">
             <span className="section-label">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               Über mich
             </span>
             <h2>Hallo, ich bin Andrea</h2>
             <p>Als zertifizierte Hypnose-Coaching-Spezialistin begleite ich Menschen seit über 8 Jahren auf ihrem Weg zu mehr Leichtigkeit, Klarheit und innerer Stärke.</p>
+            <p>Ich kam selbst über Umwege zur Hypnose – und was ich dabei erlebt habe, hat meine Perspektive auf Heilung für immer verändert. Heute begleite ich Menschen durch genau diesen Prozess.</p>
             <p>Mein Ansatz verbindet fundierte Fachkompetenz mit herzlicher Empathie. Ich glaube daran: <em>Jeder Mensch trägt die Ressourcen für Heilung bereits in sich</em> – manchmal braucht es nur den richtigen Schlüssel.</p>
             <div className="about-highlights">
               {[

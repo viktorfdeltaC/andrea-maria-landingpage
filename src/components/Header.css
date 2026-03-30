@@ -16,25 +16,16 @@
 .nav { display: flex; justify-content: space-between; align-items: center; }
 
 .logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  position: relative;
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
 }
-.logo-icon { width: 26px; height: 26px; }
-.logo::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; left: 0;
-  width: 28px; height: 2px;
-  background: var(--color-accent);
-  transition: var(--transition);
+.logo-img {
+  height: 90px;
+  width: auto;
+  display: block;
+  transition: opacity var(--transition-fast);
 }
-.logo:hover::after { width: 100%; }
+.logo:hover .logo-img { opacity: 0.8; }
 
 .nav-links {
   display: flex;
@@ -86,20 +77,44 @@
 }
 
 @media (max-width: 900px) {
-  .mobile-toggle { display: flex; align-items: center; justify-content: center; }
+  .logo-img { height: 72px; }
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
   .nav-links {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: var(--color-bg-alt);
     flex-direction: column;
-    padding: var(--spacing-xl);
-    gap: var(--spacing-md);
+    padding: 6rem var(--spacing-md) var(--spacing-lg);
+    gap: 0;
     transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s var(--ease-out-quint);
     z-index: 998;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
   }
   .nav-links.active { transform: translateX(0); }
-  .nav-links a { font-size: 1.4rem; }
+  .nav-links li { width: 100%; text-align: center; border-bottom: 1px solid rgba(123,45,58,0.07); }
+  .nav-links li:last-child { border-bottom: none; margin-top: 1.5rem; }
+  .nav-links a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 1rem var(--spacing-md);
+    width: 100%;
+  }
+  .nav-cta-link {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 0.85rem 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img { height: 60px; }
 }

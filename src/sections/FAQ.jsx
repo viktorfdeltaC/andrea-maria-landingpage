@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Für wen ist Aktiv Hypnose nicht geeignet?',
-    a: 'Aktiv Hypnose ist nicht geeignet bei akuten Psychosen, schwerer dissoziativer Störung oder wenn du aktuell eine psychiatrische Krisenbehandlung erhältst. Im Erstgespräch klären wir gemeinsam, ob die Methode für dich passend ist – Offenheit und Ehrlichkeit sind dabei das Wichtigste.',
+    a: 'Für Menschen in einer akuten psychiatrischen Krise ist Hypnose nicht der erste Schritt – hier braucht es zuerst andere Unterstützung. Aber für die meisten, die lange und erfolglos suchen, ist sie genau das Richtige. Im Erstgespräch klären wir gemeinsam und offen, ob die Methode für dich passt.',
   },
   {
     q: 'Wie unterscheidet sich Aktiv Hypnose von klassischer Therapie?',
@@ -62,8 +62,10 @@ export default function FAQ() {
                   </svg>
                 </span>
               </button>
-              <div className="faq-answer" style={{ maxHeight: open === i ? '400px' : '0' }}>
-                <p>{item.a}</p>
+              <div className={`faq-answer${open === i ? ' faq-answer--open' : ''}`}>
+                <div className="faq-answer-inner">
+                  <p>{item.a}</p>
+                </div>
               </div>
             </div>
           ))}

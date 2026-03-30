@@ -27,9 +27,13 @@
   --radius-xl: 32px;
   --radius-full: 9999px;
 
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+
+  --transition-fast: 0.2s var(--ease-out-quart);
+  --transition: 0.35s var(--ease-out-quart);
+  --transition-slow: 0.55s var(--ease-out-quint);
 
   --container-max: 1200px;
   --spacing-xs: 0.5rem;

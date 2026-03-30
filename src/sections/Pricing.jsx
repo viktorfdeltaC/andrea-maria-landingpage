@@ -52,7 +52,7 @@ export default function Pricing() {
             <div className="pricing-footer">
               <div className="pricing-footer-left">
                 <p className="pricing-context">Inkl. Vorgespräch, Session, Audio-Aufnahme & Follow-up</p>
-                <p className="pricing-note">Alle Preise inkl. MwSt. · Ratenzahlung auf Anfrage</p>
+                <p className="pricing-note">Klassische Therapie kostet 80–120 € pro Stunde – über Monate. Hier: eine Session. · Ratenzahlung auf Anfrage</p>
               </div>
               <a
                 href="#contact"

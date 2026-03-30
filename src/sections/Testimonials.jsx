@@ -2,7 +2,7 @@ import './Testimonials.css'
 
 const reviews = [
   {
-    text: 'Nach Jahren von Angstzuständen konnte ich endlich wieder durchatmen. Andrea hat einen sicheren Raum geschaffen, in dem ich mich öffnen konnte – ohne Druck, ohne Urteil.',
+    text: 'Ich hatte fast 4 Jahre Panikattacken – klassische Therapie hat geholfen, aber nie wirklich gereicht. In der Session mit Andrea hat sich etwas tief in mir verschoben. Seit 8 Monaten lebe ich ohne Angstmedikamente.',
     author: 'M.',
     age: '42',
     role: 'nach Angst-Begleitung',
@@ -10,7 +10,7 @@ const reviews = [
     color: '#7B2D3A',
   },
   {
-    text: 'Ich war skeptisch, ob Hypnose bei mir funktioniert. Aber die Aktiv-Methode hat mich überzeugt: Ich war immer wach, immer ich selbst – und habe trotzdem tiefe Blockaden gelöst.',
+    text: 'Vorher konnte ich berufliche Entscheidungen kaum treffen – ich war ständig blockiert und zweifelte an mir. Nach einer einzigen Session habe ich meine Selbstständigkeit angemeldet. Das hätte ich nicht für möglich gehalten.',
     author: 'T.',
     age: '35',
     role: 'nach Selbstwert-Session',
@@ -18,7 +18,7 @@ const reviews = [
     color: '#B8965B',
   },
   {
-    text: 'Die Online-Session war genauso intensiv wie vor Ort. Besonders wertvoll: das Audio zum Nachhören. So konnte ich die positiven Impulse im Alltag immer wieder abrufen.',
+    text: 'Ich schlief seit zwei Jahren schlecht, war tagsüber erschöpft und funktionierte nur noch. Heute, drei Monate nach der Online-Session, schlafe ich durch und habe wieder Energie für die Dinge, die mir wichtig sind.',
     author: 'L.',
     age: '29',
     role: 'nach Online-Begleitung',

@@ -1,6 +1,11 @@
 import './Hero.css'
+import { useCountUp } from '../hooks/useCountUp'
 
 export default function Hero() {
+  const [count50,  ref50]  = useCountUp(50)
+  const [count8,   ref8]   = useCountUp(8,   900)
+  const [count1,   ref1]   = useCountUp(1,   600)
+
   const scrollTo = (e, id) => {
     e.preventDefault()
     const target = document.querySelector(id)
@@ -10,7 +15,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className="hero grain">
       <div className="hero-bg-shapes">
         <div className="hero-shape hero-shape-1" />
         <div className="hero-shape hero-shape-2" />
@@ -22,13 +27,13 @@ export default function Hero() {
             Zertifiziert · Online & Vor Ort
           </span>
           <h1 className="hero-anim hero-anim-2">
-            In einer Session das lösen,<br />
-            <span className="highlight">woran Jahre nichts half</span>
+            In einer Session frei werden<br />
+            <span className="highlight">von dem, was dich festhält</span>
           </h1>
           <p className="hero-subtitle hero-anim hero-anim-3">
-            Aktiv Hypnose nach David Woods: Du bleibst jederzeit wach, behältst
-            die Kontrolle – und erlebst echte, nachhaltige Veränderung.
-            In Schwabmünchen oder online.
+            Hypnose-Coaching in Schwabmünchen & online – aktiv, bewusst und
+            nachhaltig. Nach der David Woods Methode, dem führenden Ansatz
+            für Aktiv Hypnose. Auch erreichbar aus Augsburg, Kaufbeuren und Landsberg.
           </p>
           <div className="hero-cta hero-anim hero-anim-4">
             <a href="#contact" className="btn btn-primary btn-large" onClick={(e) => scrollTo(e, '#contact')}>
@@ -37,19 +42,19 @@ export default function Hero() {
             </a>
           </div>
           <div className="hero-stats hero-anim hero-anim-5">
-            <div className="hero-stat">
-              <span className="hero-stat-number">200+</span>
+            <div className="hero-stat" ref={ref50}>
+              <span className="hero-stat-number">{count50}+</span>
               <span className="hero-stat-label">Begleitete Klient:innen</span>
             </div>
             <div className="hero-stat-divider" />
-            <div className="hero-stat">
-              <span className="hero-stat-number">8</span>
-              <span className="hero-stat-label">Jahre Erfahrung</span>
+            <div className="hero-stat" ref={ref8}>
+              <span className="hero-stat-number">{count8}</span>
+              <span className="hero-stat-label">Zertifizierungen</span>
             </div>
             <div className="hero-stat-divider" />
-            <div className="hero-stat">
-              <span className="hero-stat-number">1</span>
-              <span className="hero-stat-label">Session reicht meist</span>
+            <div className="hero-stat" ref={ref1}>
+              <span className="hero-stat-number">{count1}</span>
+              <span className="hero-stat-label">Session – transformative Wirkung</span>
             </div>
           </div>
         </div>

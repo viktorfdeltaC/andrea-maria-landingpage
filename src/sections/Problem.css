@@ -15,6 +15,7 @@
   position: relative;
   overflow: hidden;
 }
+/* Gradient top bar (::before) */
 .problem-card::before {
   content: '';
   position: absolute;
@@ -26,18 +27,33 @@
   transition: var(--transition);
 }
 .problem-card:hover::before { transform: scaleX(1); }
+/* Watermark number (::after) */
+.problem-card::after {
+  content: attr(data-number);
+  position: absolute; bottom: 0.75rem; right: 1.25rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem; font-weight: 700;
+  color: var(--color-primary); opacity: 0.055;
+  line-height: 1; pointer-events: none;
+  user-select: none;
+}
 .problem-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: rgba(123,45,58,0.12); }
 
 .problem-icon {
   width: 52px; height: 52px;
   margin-bottom: var(--spacing-md);
-  color: var(--color-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(123, 45, 58, 0.06);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(123, 45, 58, 0.25);
   transition: var(--transition);
 }
-.problem-card:hover .problem-icon { transform: scale(1.08); background: var(--color-primary); color: white; }
-.problem-icon svg { width: 26px; height: 26px; fill: currentColor; }
+.problem-card:hover .problem-icon { transform: scale(1.08); box-shadow: 0 8px 28px rgba(123,45,58,0.35); }
+.problem-icon svg { width: 26px; height: 26px; fill: white; }
+
+@media (max-width: 480px) {
+  .problem-grid { grid-template-columns: 1fr; }
+  .problem-card { padding: 1.5rem; }
+}

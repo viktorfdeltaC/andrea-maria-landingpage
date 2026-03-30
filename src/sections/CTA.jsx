@@ -26,14 +26,14 @@ export default function CTA() {
   }
 
   return (
-    <section id="contact" className="section cta-section">
+    <section id="contact" className="section cta-section grain">
       <div className="container cta-inner">
         <div className="cta-text">
           <span className="section-label cta-label">Nächster Schritt</span>
-          <h2>Bereit für deine Transformation?</h2>
+          <h2>Wie wäre es, endlich wieder du selbst zu sein?</h2>
           <p>
-            Lass uns in einem kostenlosen, unverbindlichen Gespräch klären,
-            ob Aktiv Hypnose der richtige Weg für dich ist.
+            Dein erster Schritt: ein kostenloses, unverbindliches Gespräch.
+            Gemeinsam schauen wir, ob Aktiv Hypnose der richtige Weg für dich ist.
           </p>
           <div className="cta-urgency">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -55,8 +55,9 @@ export default function CTA() {
           {status === 'success' ? (
             <div className="cta-success">
               <div className="cta-success-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                <svg className="cta-check-svg" viewBox="0 0 52 52" fill="none">
+                  <circle className="cta-check-circle" cx="26" cy="26" r="23" stroke="white" strokeWidth="2.5" fill="none"/>
+                  <polyline className="cta-check-mark" points="14,27 22,35 38,18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
               </div>
               <h3>Vielen Dank!</h3>
@@ -122,7 +123,7 @@ export default function CTA() {
                   </>
                 )}
               </button>
-              <p className="cta-form-note">Keine Werbemails. Deine Daten werden vertraulich behandelt.</p>
+              <p className="cta-form-note">Deine Daten werden vertraulich behandelt.</p>
             </form>
           )}
         </div>

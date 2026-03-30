@@ -1,10 +1,18 @@
 import { useEffect } from 'react'
 
+const CLASSES = [
+  '.animate-on-scroll',
+  '.animate-from-left',
+  '.animate-from-right',
+  '.animate-scale-up',
+]
+
 export function useAnimateOnScroll() {
   useEffect(() => {
+    const selector = CLASSES.join(', ')
     const animate = () => {
-      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+      document.querySelectorAll(selector).forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.88) {
           el.classList.add('visible')
         }
       })

@@ -11,6 +11,7 @@ import About        from './sections/About'
 import Process      from './sections/Process'
 import Pricing      from './sections/Pricing'
 import Testimonials from './sections/Testimonials'
+import PullQuote    from './components/PullQuote'
 import FAQ          from './sections/FAQ'
 import CTA          from './sections/CTA'
 
@@ -51,6 +52,7 @@ export default function App() {
         <Process />
         <Pricing />
         <Testimonials />
+        <PullQuote />
         <FAQ />
         <CTA />
       </main>

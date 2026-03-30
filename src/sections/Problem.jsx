@@ -32,7 +32,7 @@ export default function Problem() {
         </div>
         <div className="problem-grid">
           {problems.map((p, i) => (
-            <article key={i} className={`problem-card animate-on-scroll delay-${i + 1}`}>
+            <article key={i} className={`problem-card animate-on-scroll delay-${i + 1}`} data-number={`0${i + 1}`}>
               <div className="problem-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">{p.icon}</svg>
               </div>

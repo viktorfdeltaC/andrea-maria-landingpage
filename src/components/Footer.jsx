@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 export default function Footer() {
@@ -9,10 +10,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <span className="footer-logo">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              Andrea Maria
+              <img src="/logo-transparent.svg" alt="Andrea Maria Coaching" className="footer-logo-img" />
             </span>
             <p>Hypnose-Coaching mit Herz & Kompetenz<br />Schwabmünchen & Online</p>
           </div>
@@ -27,9 +25,8 @@ export default function Footer() {
           <div className="footer-links">
             <h4>Rechtliches</h4>
             <ul>
-              <li><a href="/impressum">Impressum</a></li>
-              <li><a href="/datenschutz">Datenschutz</a></li>
-              <li><a href="/agb">AGB</a></li>
+              <li><Link to="/impressum">Impressum</Link></li>
+              <li><Link to="/datenschutz">Datenschutz</Link></li>
             </ul>
           </div>
           <div className="footer-links">
@@ -44,8 +41,8 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>
             &copy; {year} Andrea Maria Coaching &nbsp;•&nbsp;
-            <a href="/datenschutz">Datenschutz</a> &nbsp;•&nbsp;
-            <a href="/impressum">Impressum</a>
+            <Link to="/datenschutz">Datenschutz</Link> &nbsp;•&nbsp;
+            <Link to="/impressum">Impressum</Link>
           </p>
         </div>
       </div>
