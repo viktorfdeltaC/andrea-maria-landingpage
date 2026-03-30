@@ -1,0 +1,73 @@
+.pricing-wrapper { max-width: 900px; margin: var(--spacing-lg) auto; }
+
+.pricing-card {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1.5px solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: stretch;
+  transition: var(--transition);
+}
+.pricing-card::before {
+  content: 'Beliebt';
+  position: absolute;
+  top: 18px; right: -38px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  color: white;
+  padding: var(--spacing-xs) 45px;
+  font-size: 0.75rem; font-weight: 700;
+  transform: rotate(45deg);
+  box-shadow: var(--shadow-md);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  z-index: 10;
+}
+.pricing-card:hover { box-shadow: 0 30px 80px rgba(123,45,58,0.18); border-color: var(--color-primary-light); }
+
+.pricing-content { padding: var(--spacing-xl); display: flex; flex-direction: column; justify-content: center; }
+.pricing-header { margin-bottom: var(--spacing-md); }
+.pricing-label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: var(--spacing-xs); }
+.pricing-header h3 { font-size: 1.75rem; margin-bottom: var(--spacing-xs); }
+
+.pricing-price-block { display: flex; align-items: baseline; gap: var(--spacing-sm); margin-bottom: var(--spacing-md); }
+.price { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: var(--color-primary); font-weight: 700; line-height: 1; }
+.price-period { font-size: 1rem; color: var(--color-text-muted); font-weight: 400; }
+.price-context { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: var(--spacing-lg); max-width: 400px; }
+
+.pricing-features { list-style: none; margin-bottom: var(--spacing-lg); }
+.pricing-features li { padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-sm); font-size: 0.95rem; color: var(--color-text-light); }
+.pricing-features li svg { width: 18px; height: 18px; fill: var(--color-primary); flex-shrink: 0; margin-top: 3px; }
+
+.pricing-cta { margin-top: var(--spacing-md); }
+.pricing-note { font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; margin-top: var(--spacing-sm); }
+
+.pricing-visual {
+  background: linear-gradient(135deg, var(--color-primary-pale) 0%, rgba(184,150,91,0.15) 100%);
+  padding: var(--spacing-xl);
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; position: relative;
+}
+.pricing-visual-content { position: relative; z-index: 1; }
+.pricing-visual-icon {
+  width: 80px; height: 80px;
+  background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+.pricing-visual-icon svg { width: 40px; height: 40px; fill: var(--color-primary); }
+.pricing-visual h4 { font-size: 1.25rem; margin-bottom: var(--spacing-xs); color: var(--color-text); }
+.pricing-visual p { font-size: 0.9rem; color: var(--color-text-muted); max-width: 250px; }
+
+@media (max-width: 1100px) {
+  .pricing-card { grid-template-columns: 1fr; }
+  .pricing-content { padding: var(--spacing-lg); }
+  .pricing-visual { padding: var(--spacing-lg); }
+}
+@media (max-width: 768px) {
+  .price { font-size: 2.75rem; }
+}

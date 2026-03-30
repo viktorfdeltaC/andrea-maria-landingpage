@@ -1,0 +1,43 @@
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.problem-card {
+  background: var(--color-bg-alt);
+  padding: clamp(2rem, 4vw, 2.75rem);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid rgba(123,45,58,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+.problem-card:hover::before { transform: scaleX(1); }
+.problem-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: rgba(123,45,58,0.12); }
+
+.problem-icon {
+  width: 52px; height: 52px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(123, 45, 58, 0.06);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+.problem-card:hover .problem-icon { transform: scale(1.08); background: var(--color-primary); color: white; }
+.problem-icon svg { width: 26px; height: 26px; fill: currentColor; }
