@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './CTA.css'
 
 const trust = [
@@ -7,31 +8,123 @@ const trust = [
 ]
 
 export default function CTA() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+
+  const handleChange = (e) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setStatus('sending')
+    // Simulate send — replace with real API call or Formspree/Netlify form
+    setTimeout(() => {
+      setStatus('success')
+      setForm({ name: '', email: '', message: '' })
+    }, 1200)
+  }
+
   return (
     <section id="contact" className="section cta-section">
       <div className="container cta-inner">
-        <span className="section-label cta-label">Nächster Schritt</span>
-        <h2>Bereit für deine Transformation?</h2>
-        <p>
-          Lass uns in einem kostenlosen, unverbindlichen Gespräch klären,
-          ob Aktiv Hypnose der richtige Weg für dich ist.
-        </p>
-        <a
-          href="mailto:hello@andreamariacoaching.de?subject=Erstgespräch%20Aktiv%20Hypnose"
-          className="btn btn-large cta-btn"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-          </svg>
-          Jetzt Erstgespräch anfragen
-        </a>
-        <div className="cta-trust">
-          {trust.map((t, i) => (
-            <span key={i}>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d={t.path}/></svg>
-              {t.label}
-            </span>
-          ))}
+        <div className="cta-text">
+          <span className="section-label cta-label">Nächster Schritt</span>
+          <h2>Bereit für deine Transformation?</h2>
+          <p>
+            Lass uns in einem kostenlosen, unverbindlichen Gespräch klären,
+            ob Aktiv Hypnose der richtige Weg für dich ist.
+          </p>
+          <div className="cta-urgency">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+            </svg>
+            Begrenzte Plätze pro Monat – aktuell noch Termine verfügbar
+          </div>
+          <div className="cta-trust">
+            {trust.map((t, i) => (
+              <span key={i}>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d={t.path}/></svg>
+                {t.label}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="cta-form-wrapper">
+          {status === 'success' ? (
+            <div className="cta-success">
+              <div className="cta-success-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h3>Vielen Dank!</h3>
+              <p>Ich melde mich innerhalb von 24 Stunden bei dir.</p>
+            </div>
+          ) : (
+            <form className="cta-form" onSubmit={handleSubmit} noValidate>
+              <div className="cta-form-row">
+                <div className="cta-field">
+                  <label htmlFor="cta-name">Dein Name</label>
+                  <input
+                    id="cta-name"
+                    name="name"
+                    type="text"
+                    placeholder="z. B. Maria"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    autoComplete="name"
+                  />
+                </div>
+                <div className="cta-field">
+                  <label htmlFor="cta-email">E-Mail-Adresse</label>
+                  <input
+                    id="cta-email"
+                    name="email"
+                    type="email"
+                    placeholder="deine@email.de"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    autoComplete="email"
+                  />
+                </div>
+              </div>
+              <div className="cta-field">
+                <label htmlFor="cta-message">Womit kann ich dir helfen? <span>(optional)</span></label>
+                <textarea
+                  id="cta-message"
+                  name="message"
+                  rows={4}
+                  placeholder="Erzähl mir kurz, was dich bewegt …"
+                  value={form.message}
+                  onChange={handleChange}
+                />
+              </div>
+              <button
+                type="submit"
+                className="btn btn-large cta-submit-btn"
+                disabled={status === 'sending'}
+              >
+                {status === 'sending' ? (
+                  <>
+                    <span className="cta-spinner" />
+                    Wird gesendet …
+                  </>
+                ) : (
+                  <>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                    Kostenlos Erstgespräch anfragen
+                  </>
+                )}
+              </button>
+              <p className="cta-form-note">Keine Werbemails. Deine Daten werden vertraulich behandelt.</p>
+            </form>
+          )}
         </div>
       </div>
     </section>

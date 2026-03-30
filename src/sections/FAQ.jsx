@@ -16,7 +16,23 @@ const faqs = [
   },
   {
     q: 'Kann ich auch online teilnehmen?',
-    a: 'Ja, gerne! Die Aktiv Hypnose funktioniert hervorragend online – viele Klient:innen schätzen sogar die Vertrautheit der eigenen Umgebung.',
+    a: 'Ja, gerne! Die Aktiv Hypnose funktioniert hervorragend online – viele Klient:innen schätzen sogar die Vertrautheit der eigenen Umgebung. Du brauchst nur eine ruhige, ungestörte Umgebung und eine stabile Internetverbindung.',
+  },
+  {
+    q: 'Was kostet eine Session und was ist inbegriffen?',
+    a: 'Eine vollständige Aktiv Hypnose Session kostet 390 € – inklusive kostenloses Erstgespräch (20 Min.), der 2,5-stündigen Tiefen-Session, einer Audio-Aufnahme zum Nachhören sowie Integrations-Impulsen für den Alltag. Keine versteckten Kosten. Ratenzahlung ist auf Anfrage möglich.',
+  },
+  {
+    q: 'Wie viele Sessions brauche ich?',
+    a: 'Die Aktiv Hypnose nach David Woods ist so konzipiert, dass in vielen Fällen eine einzige Session ausreicht, um nachhaltige Veränderung zu erzielen. Je nach Thema und Tiefe können Folgesessions sinnvoll sein – das besprechen wir transparent im Erstgespräch.',
+  },
+  {
+    q: 'Für wen ist Aktiv Hypnose nicht geeignet?',
+    a: 'Aktiv Hypnose ist nicht geeignet bei akuten Psychosen, schwerer dissoziativer Störung oder wenn du aktuell eine psychiatrische Krisenbehandlung erhältst. Im Erstgespräch klären wir gemeinsam, ob die Methode für dich passend ist – Offenheit und Ehrlichkeit sind dabei das Wichtigste.',
+  },
+  {
+    q: 'Wie unterscheidet sich Aktiv Hypnose von klassischer Therapie?',
+    a: 'Klassische Gesprächstherapie arbeitet hauptsächlich auf der bewussten Ebene und kann oft Monate oder Jahre dauern. Aktiv Hypnose hingegen erreicht direkt das Unterbewusstsein, wo Muster und Blockaden gespeichert sind – und erzielt dadurch oft in einer einzigen Session das, woran Therapie lange gearbeitet hat. Sie ersetzt keine psychiatrische Behandlung, ergänzt aber viele andere Methoden sehr wirkungsvoll.',
   },
 ]
 

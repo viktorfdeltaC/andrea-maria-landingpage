@@ -1,4 +1,3 @@
-import { useAnimateOnScroll } from '../hooks/useAnimateOnScroll'
 import './Problem.css'
 
 const problems = [
@@ -20,8 +19,6 @@ const problems = [
 ]
 
 export default function Problem() {
-  useAnimateOnScroll()
-
   return (
     <section id="problem" className="section section--alt animate-on-scroll">
       <div className="container">

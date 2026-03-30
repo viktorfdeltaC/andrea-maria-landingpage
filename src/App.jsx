@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './styles/global.css'
+import { useAnimateOnScroll } from './hooks/useAnimateOnScroll'
 
 import Header       from './components/Header'
 import Footer       from './components/Footer'
@@ -17,12 +18,9 @@ export default function App() {
   const [scrollPct, setScrollPct] = useState(0)
   const [showTop, setShowTop]     = useState(false)
 
-  useEffect(() => {
-    const link = document.createElement('link')
-    link.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap'
-    link.rel  = 'stylesheet'
-    document.head.appendChild(link)
+  useAnimateOnScroll()
 
+  useEffect(() => {
     const onScroll = () => {
       const scrollTop    = document.documentElement.scrollTop
       const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight

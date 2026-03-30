@@ -3,18 +3,27 @@ import './Testimonials.css'
 const reviews = [
   {
     text: 'Nach Jahren von Angstzuständen konnte ich endlich wieder durchatmen. Andrea hat einen sicheren Raum geschaffen, in dem ich mich öffnen konnte – ohne Druck, ohne Urteil.',
-    author: 'M., 42',
+    author: 'M.',
+    age: '42',
     role: 'nach Angst-Begleitung',
+    initials: 'M',
+    color: '#7B2D3A',
   },
   {
     text: 'Ich war skeptisch, ob Hypnose bei mir funktioniert. Aber die Aktiv-Methode hat mich überzeugt: Ich war immer wach, immer ich selbst – und habe trotzdem tiefe Blockaden gelöst.',
-    author: 'T., 35',
+    author: 'T.',
+    age: '35',
     role: 'nach Selbstwert-Session',
+    initials: 'T',
+    color: '#B8965B',
   },
   {
     text: 'Die Online-Session war genauso intensiv wie vor Ort. Besonders wertvoll: das Audio zum Nachhören. So konnte ich die positiven Impulse im Alltag immer wieder abrufen.',
-    author: 'L., 29',
+    author: 'L.',
+    age: '29',
     role: 'nach Online-Begleitung',
+    initials: 'L',
+    color: '#C9968A',
   },
 ]
 
@@ -38,13 +47,19 @@ export default function Testimonials() {
         <div className="testimonials-grid">
           {reviews.map((r, i) => (
             <article key={i} className={`testimonial-card animate-on-scroll delay-${i + 1}`}>
+              <div className="testimonial-quote-mark">&ldquo;</div>
               <div className="testimonial-stars">
                 {Array.from({ length: 5 }).map((_, j) => <Star key={j} />)}
               </div>
               <p className="testimonial-text">{r.text}</p>
-              <footer>
-                <span className="testimonial-author">{r.author}</span>
-                <span className="testimonial-role">{r.role}</span>
+              <footer className="testimonial-footer">
+                <div className="testimonial-avatar" style={{ background: r.color }}>
+                  {r.initials}
+                </div>
+                <div className="testimonial-meta">
+                  <span className="testimonial-author">{r.author}, {r.age}</span>
+                  <span className="testimonial-role">{r.role}</span>
+                </div>
               </footer>
             </article>
           ))}
