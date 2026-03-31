@@ -60,11 +60,7 @@ export default function Hero() {
         </div>
         <div className="hero-image">
           <div className="hero-image-wrapper">
-            {/* Replace src with actual photo */}
-            <div className="img-placeholder">
-              <svg viewBox="0 0 24 24" fill="#7B2D3A"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-              <span>Foto Andrea Maria</span>
-            </div>
+            <img src="/hero.jpeg" alt="Andrea Maria" />
             <div className="hero-image-overlay" />
           </div>
         </div>

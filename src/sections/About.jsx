@@ -13,11 +13,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-image-wrapper animate-from-left">
             <div className="about-image">
-              {/* Replace with: <img src="/images/andrea.jpg" alt="Andrea Maria" /> */}
-              <div className="img-placeholder">
-                <svg viewBox="0 0 24 24" fill="#7B2D3A"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                <span>Foto Andrea</span>
-              </div>
+              <img src="/übermich.jpeg" alt="Andrea Maria" />
             </div>
             <div className="about-image-accent" />
           </div>
