@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { StarButton } from '@/components/ui/star-button'
 import './Header.css'
 
 export default function Header() {
@@ -67,9 +68,9 @@ export default function Header() {
             </li>
           ))}
           <li>
-            <a href="#contact" className="nav-cta-link" onClick={(e) => scrollTo(e, '#contact')}>
+            <StarButton onClick={(e) => scrollTo(e, '#contact')} className="star-btn--nav">
               Erstgespräch
-            </a>
+            </StarButton>
           </li>
         </ul>
       </nav>

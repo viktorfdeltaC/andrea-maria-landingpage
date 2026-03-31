@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { StarButton } from '@/components/ui/star-button'
 import './CTA.css'
 
 const trust = [
@@ -104,11 +105,7 @@ export default function CTA() {
                   onChange={handleChange}
                 />
               </div>
-              <button
-                type="submit"
-                className="btn btn-large cta-submit-btn"
-                disabled={status === 'sending'}
-              >
+              <StarButton type="submit" disabled={status === 'sending'} className="star-btn--full">
                 {status === 'sending' ? (
                   <>
                     <span className="cta-spinner" />
@@ -116,13 +113,13 @@ export default function CTA() {
                   </>
                 ) : (
                   <>
-                    <svg viewBox="0 0 24 24" fill="currentColor">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                       <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                     </svg>
-                    Kostenlos Erstgespräch anfragen
+                    Jetzt Termin buchen
                   </>
                 )}
-              </button>
+              </StarButton>
               <p className="cta-form-note">Deine Daten werden vertraulich behandelt.</p>
             </form>
           )}
