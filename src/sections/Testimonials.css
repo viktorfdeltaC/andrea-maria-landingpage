@@ -1,6 +1,6 @@
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
 }
@@ -100,8 +100,11 @@
 @media (max-width: 768px) {
   .testimonial-text { font-size: 1.05rem; }
   .testimonial-card { padding: 1.5rem; }
+  .testimonial-quote-mark { font-size: 5rem; }
 }
 
 @media (max-width: 480px) {
   .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-text { font-size: 0.95rem; }
+  .testimonial-quote-mark { font-size: 4rem; }
 }

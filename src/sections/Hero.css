@@ -193,7 +193,17 @@
 
 @media (max-width: 480px) {
   .hero-shape-1, .hero-shape-2 { display: none; }
-  .hero-badge { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+  .hero-badge {
+    font-size: 0.68rem;
+    padding: 0.4rem 0.75rem;
+    letter-spacing: 0.05em;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-subtitle { font-size: 0.95rem; max-width: 100%; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
   .hero-stats {
     grid-template-columns: 1fr;
     gap: 0.6rem;
@@ -202,6 +212,6 @@
   }
   .hero-stat { padding: 0.2rem 0; }
   .hero-stat-divider { width: 40px; height: 1px; justify-self: center; }
-  .hero-image { max-width: 300px; }
+  .hero-image { max-width: 280px; }
   .hero-image::before { display: none; }
 }
