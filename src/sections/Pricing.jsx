@@ -10,12 +10,6 @@ const features = [
 ]
 
 export default function Pricing() {
-  const scrollTo = (e) => {
-    e.preventDefault()
-    const target = document.querySelector('#contact')
-    if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' })
-  }
-
   return (
     <section id="pricing" className="section section--alt animate-on-scroll">
       <div className="container">
@@ -59,9 +53,10 @@ export default function Pricing() {
                 </p>
               </div>
               <a
-                href="#contact"
+                href="https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary"
-                onClick={scrollTo}
               >
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>

@@ -8,12 +8,6 @@ const credentials = [
 ]
 
 export default function About() {
-  const scrollTo = (e) => {
-    e.preventDefault()
-    const target = document.querySelector('#contact')
-    if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' })
-  }
-
   return (
     <section id="about" className="section about-section">
       <div className="container">
@@ -59,7 +53,7 @@ export default function About() {
               ))}
             </ul>
 
-            <a href="#contact" className="btn btn-primary about-cta" onClick={scrollTo}>
+            <a href="https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary about-cta">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                 <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
               </svg>

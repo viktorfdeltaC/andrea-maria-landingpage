@@ -59,7 +59,7 @@ export default function FAQ() {
             </p>
             <div className="faq-cta-block">
               <p>Deine Frage ist nicht dabei?</p>
-              <a href="#contact" className="btn btn-secondary faq-cta-btn" onClick={scrollTo}>
+              <a href="https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-secondary faq-cta-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
                 </svg>

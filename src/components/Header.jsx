@@ -68,7 +68,10 @@ export default function Header() {
             </li>
           ))}
           <li>
-            <StarButton onClick={(e) => scrollTo(e, '#contact')} className="star-btn--nav">
+            <StarButton
+              onClick={() => window.open('https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04', '_blank', 'noopener,noreferrer')}
+              className="star-btn--nav"
+            >
               Erstgespräch
             </StarButton>
           </li>

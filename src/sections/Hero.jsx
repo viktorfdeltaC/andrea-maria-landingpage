@@ -66,7 +66,7 @@ export default function Hero() {
 
           {/* CTA */}
           <motion.div variants={item}>
-            <StarButton onClick={(e) => scrollTo(e, '#contact')} className="star-btn--full hero-cta-btn">
+            <StarButton onClick={() => window.open('https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04', '_blank', 'noopener,noreferrer')} className="star-btn--full hero-cta-btn">
               Kostenloses Erstgespräch buchen
             </StarButton>
           </motion.div>

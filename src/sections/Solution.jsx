@@ -26,7 +26,7 @@ export default function Solution() {
             <h2>Was ist Aktiv Hypnose?</h2>
             <p>Aktiv Hypnose nach der David Woods Methode – dem führenden Ansatz für aktive Hypnose aus dem UK – versetzt dich nicht in einen passiven Trance-Zustand. Du erlebst <strong>Veränderung sofort – nicht erst nach Monaten</strong>.</p>
             <p>Du bleibst jederzeit wach, ansprechbar und behältst die Kontrolle. Gemeinsam arbeiten wir direkt mit deinem Unterbewusstsein – für Ergebnisse, die bleiben.</p>
-            <a href="#contact" className="btn btn-primary" onClick={scrollTo} style={{ marginTop: '1rem' }}>Jetzt kostenloses Gespräch buchen</a>
+            <a href="https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '1rem' }}>Jetzt kostenloses Gespräch buchen</a>
           </div>
           <div className="comparison animate-from-right">
             <div className="comparison-header">
