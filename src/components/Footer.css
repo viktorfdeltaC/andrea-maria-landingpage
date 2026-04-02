@@ -59,7 +59,7 @@
 
 .footer-links h4 { color: white; margin-bottom: var(--spacing-md); font-size: 1rem; font-weight: 600; }
 .footer-links ul { list-style: none; }
-.footer-links li { margin-bottom: var(--spacing-sm); }
+.footer-links li { margin-bottom: var(--spacing-sm); white-space: nowrap; }
 .footer-links a { color: rgba(255,255,255,0.6); transition: var(--transition-fast); }
 .footer-links a:hover { color: white; padding-left: 6px; }
 
