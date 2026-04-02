@@ -91,10 +91,10 @@ export default function Hero() {
 
           {/* Contact footer */}
           <motion.footer className="hero-contact" variants={item}>
-            <span className="hero-contact-item">
+            <a href="https://www.andreamariacoaching.de" target="_blank" rel="noopener noreferrer" className="hero-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               andreamariacoaching.de
-            </span>
+            </a>
             <span className="hero-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Schwabmünchen, Bayern
