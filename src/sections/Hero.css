@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 130px;
   background: linear-gradient(135deg, var(--color-bg) 0%, rgba(123,45,58,0.04) 50%, rgba(201,150,138,0.05) 100%);
   position: relative;
   overflow: visible;
@@ -184,7 +184,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero { padding-top: 80px; min-height: auto; padding-bottom: 3rem; }
+  .hero { padding-top: 110px; min-height: auto; padding-bottom: 3rem; }
   .hero-shape-1 { width: 300px; height: 300px; top: -5%; right: -15%; }
   .hero-shape-2 { width: 220px; height: 220px; bottom: -5%; left: -10%; }
   .hero-subtitle { font-size: 1.05rem; }
