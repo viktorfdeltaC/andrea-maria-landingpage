@@ -12,6 +12,7 @@ import Process      from './sections/Process'
 import Pricing      from './sections/Pricing'
 import Testimonials from './sections/Testimonials'
 import PullQuote    from './components/PullQuote'
+import WhatsAppFloat from './components/WhatsAppFloat'
 import FAQ          from './sections/FAQ'
 import CTA          from './sections/CTA'
 
@@ -64,6 +65,8 @@ export default function App() {
           Kostenloses Erstgespräch buchen
         </a>
       </div>
+
+      <WhatsAppFloat />
 
       <button
         className={`back-to-top${showTop ? ' visible' : ''}`}

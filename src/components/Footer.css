@@ -32,6 +32,31 @@
 }
 .footer-brand p { color: rgba(255,255,255,0.6); line-height: 1.7; max-width: none; font-size: 0.9rem; }
 
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.65);
+  transition: var(--transition-fast);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-social-link:hover {
+  background: rgba(255,255,255,0.18);
+  color: white;
+  transform: translateY(-2px);
+}
+
 .footer-links h4 { color: white; margin-bottom: var(--spacing-md); font-size: 1rem; font-weight: 600; }
 .footer-links ul { list-style: none; }
 .footer-links li { margin-bottom: var(--spacing-sm); }
