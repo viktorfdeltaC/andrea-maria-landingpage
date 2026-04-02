@@ -9,7 +9,7 @@ const trust = [
 ]
 
 export default function CTA() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', topic: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | sending | success | error
 
   const handleChange = (e) => {
@@ -22,7 +22,7 @@ export default function CTA() {
     // Simulate send — replace with real API call or Formspree/Netlify form
     setTimeout(() => {
       setStatus('success')
-      setForm({ name: '', email: '', message: '' })
+      setForm({ name: '', email: '', topic: '', message: '' })
     }, 1200)
   }
 
@@ -95,7 +95,22 @@ export default function CTA() {
                 </div>
               </div>
               <div className="cta-field">
-                <label htmlFor="cta-message">Womit kann ich dir helfen? <span>(optional)</span></label>
+                <label htmlFor="cta-topic">Worum geht es dir grob? <span>(optional)</span></label>
+                <select
+                  id="cta-topic"
+                  name="topic"
+                  value={form.topic}
+                  onChange={handleChange}
+                >
+                  <option value="">Bitte wählen …</option>
+                  <option value="Angst">Angst &amp; Panik</option>
+                  <option value="Selbstwert">Selbstwert &amp; Blockaden</option>
+                  <option value="Schlaf">Schlaf &amp; Erschöpfung</option>
+                  <option value="Anderes">Anderes</option>
+                </select>
+              </div>
+              <div className="cta-field">
+                <label htmlFor="cta-message">Möchtest du noch etwas ergänzen? <span>(optional)</span></label>
                 <textarea
                   id="cta-message"
                   name="message"
@@ -116,7 +131,7 @@ export default function CTA() {
                     <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                       <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                     </svg>
-                    Jetzt Termin buchen
+                    Kostenloses Erstgespräch anfragen
                   </>
                 )}
               </StarButton>
