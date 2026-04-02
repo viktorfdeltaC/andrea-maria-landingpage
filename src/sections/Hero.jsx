@@ -4,7 +4,7 @@ import { useCountUp } from '../hooks/useCountUp'
 export default function Hero() {
   const [count50,  ref50]  = useCountUp(50)
   const [count8,   ref8]   = useCountUp(8,   900)
-  const [count1,   ref1]   = useCountUp(1,   600)
+  const [count94,  ref94]  = useCountUp(94,  600)
 
   const scrollTo = (e, id) => {
     e.preventDefault()
@@ -48,13 +48,13 @@ export default function Hero() {
             </div>
             <div className="hero-stat-divider" />
             <div className="hero-stat" ref={ref8}>
-              <span className="hero-stat-number">{count8}</span>
-              <span className="hero-stat-label">Zertifizierungen</span>
+              <span className="hero-stat-number">{count8}+</span>
+              <span className="hero-stat-label">Jahre Erfahrung</span>
             </div>
             <div className="hero-stat-divider" />
-            <div className="hero-stat" ref={ref1}>
-              <span className="hero-stat-number">{count1}</span>
-              <span className="hero-stat-label">Session – transformative Wirkung</span>
+            <div className="hero-stat" ref={ref94}>
+              <span className="hero-stat-number">{count94}%</span>
+              <span className="hero-stat-label">Spüren Veränderung nach 1 Session</span>
             </div>
           </div>
         </div>

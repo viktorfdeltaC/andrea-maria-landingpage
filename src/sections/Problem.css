@@ -53,7 +53,20 @@
 .problem-card:hover .problem-icon { transform: scale(1.08); box-shadow: 0 8px 28px rgba(123,45,58,0.35); }
 .problem-icon svg { width: 26px; height: 26px; fill: white; }
 
+.problem-bridge {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  font-size: 1.15rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 480px) {
   .problem-grid { grid-template-columns: 1fr; }
   .problem-card { padding: 1.5rem; }
+  .problem-bridge { font-size: 1rem; }
 }

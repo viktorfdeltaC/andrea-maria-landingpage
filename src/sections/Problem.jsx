@@ -41,6 +41,9 @@ export default function Problem() {
             </article>
           ))}
         </div>
+        <p className="problem-bridge animate-on-scroll">
+          Erkennst du dich darin wieder? Du bist nicht allein – und es gibt einen Weg heraus.
+        </p>
       </div>
     </section>
   )
