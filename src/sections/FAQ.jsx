@@ -32,43 +32,66 @@ const faqs = [
   },
   {
     q: 'Wie unterscheidet sich Aktiv Hypnose von klassischer Therapie?',
-    a: 'Klassische Gesprächstherapie arbeitet hauptsächlich auf der bewussten Ebene und kann oft Monate oder Jahre dauern. Aktiv Hypnose hingegen erreicht direkt das Unterbewusstsein, wo Muster und Blockaden gespeichert sind – und erzielt dadurch oft in einer einzigen Session das, woran Therapie lange gearbeitet hat. Sie ersetzt keine psychiatrische Behandlung, ergänzt aber viele andere Methoden sehr wirkungsvoll.',
+    a: 'Klassische Gesprächstherapie arbeitet hauptsächlich auf der bewussten Ebene und kann oft Monate oder Jahre dauern. Aktiv Hypnose hingegen erreicht direkt das Unterbewusstsein, wo Muster und Blockaden gespeichert sind – und erzielt dadurch oft in einer einzigen Session das, woran Therapie lange gearbeitet hat.',
   },
 ]
 
 export default function FAQ() {
-  const [open, setOpen] = useState(null)
+  const [open, setOpen] = useState(0)
+
+  const scrollTo = (e) => {
+    e.preventDefault()
+    const target = document.querySelector('#contact')
+    if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' })
+  }
 
   return (
-    <section id="faq" className="section section--alt animate-on-scroll">
+    <section id="faq" className="section faq-section">
       <div className="container">
-        <div className="section-header">
-          <span className="section-label">Fragen & Antworten</span>
-          <h2>Häufige Fragen</h2>
-          <p className="section-intro">Hier findest du Antworten auf die wichtigsten Fragen zur Aktiv Hypnose.</p>
-        </div>
-        <div className="faq-list">
-          {faqs.map((item, i) => (
-            <div key={i} className={`faq-item${open === i ? ' active' : ''}`}>
-              <button
-                className="faq-question"
-                aria-expanded={open === i}
-                onClick={() => setOpen(open === i ? null : i)}
-              >
-                {item.q}
-                <span className="faq-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M6 9l6 6 6-6"/>
-                  </svg>
-                </span>
-              </button>
-              <div className={`faq-answer${open === i ? ' faq-answer--open' : ''}`}>
-                <div className="faq-answer-inner">
-                  <p>{item.a}</p>
+        <div className="faq-layout">
+
+          {/* ── Left: sticky header ── */}
+          <div className="faq-header-col">
+            <span className="section-label">FAQ</span>
+            <h2>Häufige Fragen</h2>
+            <p className="faq-intro">
+              Du hast Fragen zu Aktiv Hypnose, zum Ablauf oder zu den Kosten? Hier findest du die wichtigsten Antworten.
+            </p>
+            <div className="faq-cta-block">
+              <p>Deine Frage ist nicht dabei?</p>
+              <a href="#contact" className="btn btn-secondary faq-cta-btn" onClick={scrollTo}>
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                </svg>
+                Stell mir deine Frage
+              </a>
+            </div>
+          </div>
+
+          {/* ── Right: accordion ── */}
+          <div className="faq-list">
+            {faqs.map((item, i) => (
+              <div key={i} className={`faq-item${open === i ? ' active' : ''}`}>
+                <button
+                  className="faq-question"
+                  aria-expanded={open === i}
+                  onClick={() => setOpen(open === i ? null : i)}
+                >
+                  <span className="faq-num">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="faq-q-text">{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true">
+                    {open === i ? '−' : '+'}
+                  </span>
+                </button>
+                <div className={`faq-answer${open === i ? ' faq-answer--open' : ''}`}>
+                  <div className="faq-answer-inner">
+                    <p>{item.a}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
