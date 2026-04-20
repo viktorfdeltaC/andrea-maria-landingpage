@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="footer-links">
             <h4>Kontakt</h4>
             <ul>
-              <li><a href="mailto:hartnera@gmx.de">hartnera@gmx.de</a></li>
+              <li><a href="mailto:kontakt@andreamariacoaching.de">kontakt@andreamariacoaching.de</a></li>
               <li><a href="tel:+491727570083">+49 172 7570083</a></li>
               <li>86830 Schwabmünchen, Bayern</li>
             </ul>

@@ -29,7 +29,7 @@ export default function Impressum() {
         </p>
 
         <p>
-          <strong>E-Mail:</strong> <a href="mailto:hartnera@gmx.de">hartnera@gmx.de</a>
+          <strong>E-Mail:</strong> <a href="mailto:kontakt@andreamariacoaching.de">kontakt@andreamariacoaching.de</a>
         </p>
 
         <p>
