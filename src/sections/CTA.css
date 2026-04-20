@@ -247,3 +247,11 @@
   .cta-field textarea { font-size: 1rem; } /* prevent iOS zoom */
   .cta-section h2 { font-size: 1.55rem; }
 }
+
+.cta-form-error {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #C44;
+  margin: 0;
+  max-width: none;
+}

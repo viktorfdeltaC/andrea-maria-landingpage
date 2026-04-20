@@ -16,14 +16,31 @@ export default function CTA() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-    // Simulate send — replace with real API call or Formspree/Netlify form
-    setTimeout(() => {
-      setStatus('success')
-      setForm({ name: '', email: '', topic: '', message: '' })
-    }, 1200)
+
+    try {
+      const res = await fetch('https://formspree.io/f/mvzdqyre', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          topic: form.topic,
+          message: form.message,
+        }),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        setForm({ name: '', email: '', topic: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -136,6 +153,9 @@ export default function CTA() {
                 )}
               </StarButton>
               <p className="cta-form-note">Deine Daten werden vertraulich behandelt.</p>
+              {status === 'error' && (
+                <p className="cta-form-error">Etwas ist schiefgelaufen. Bitte schreib direkt an kontakt@andreamariacoaching.de</p>
+              )}
             </form>
           )}
         </div>
