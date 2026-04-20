@@ -218,12 +218,19 @@ a:not(.btn):hover { color: var(--color-primary-dark); }
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: 0.65rem var(--spacing-md);
   background: white;
   box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
   z-index: 999;
 }
-.sticky-cta .btn { width: 100%; justify-content: center; }
+.sticky-cta .btn {
+  width: 100%;
+  justify-content: center;
+  min-height: 46px;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  white-space: nowrap;
+}
 
 /* Accessibility */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
@@ -241,8 +248,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--color-accent); 
   p  { font-size: 1rem; }
   .section-intro { font-size: 1.05rem; }
   .sticky-cta { display: block; }
-  body { padding-bottom: 90px; } /* matches 56px btn + 2×17px padding */
-  .back-to-top { bottom: 100px; right: 16px; width: 44px; height: 44px; }
+  body { padding-bottom: 72px; }
+  .back-to-top { bottom: 84px; right: 16px; width: 44px; height: 44px; }
 
   /* Convert horizontal animations to vertical on mobile to prevent overflow-x */
   .animate-from-left,

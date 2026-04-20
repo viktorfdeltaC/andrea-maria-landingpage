@@ -64,7 +64,7 @@ export default function App() {
 
       <div className="sticky-cta" aria-hidden="true">
         <a href="#contact" className="btn btn-primary">
-          Kostenloses Erstgespräch buchen
+          Erstgespräch buchen – kostenlos
         </a>
       </div>
 
