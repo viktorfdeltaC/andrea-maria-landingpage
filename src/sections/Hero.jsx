@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { StarButton } from '@/components/ui/star-button'
 import { useCountUp } from '../hooks/useCountUp'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 import './Hero.css'
 
 const container = {
@@ -20,6 +21,7 @@ export default function Hero() {
   const [count50, ref50] = useCountUp(50)
   const [count4,  ref4]  = useCountUp(4,  900)
   const [count94, ref94] = useCountUp(94, 600)
+  const isMobile = useMediaQuery('(max-width: 900px)')
 
   const scrollTo = (e, id) => {
     e.preventDefault()
@@ -109,8 +111,8 @@ export default function Hero() {
         {/* ── RIGHT PANEL — image with diagonal reveal ── */}
         <motion.div
           className="hero-image-panel"
-          initial={{ clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' }}
-          animate={{ clipPath: 'polygon(12% 0, 100% 0, 100% 100%, 0% 100%)' }}
+          initial={{ clipPath: isMobile ? 'none' : 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' }}
+          animate={{ clipPath: isMobile ? 'none' : 'polygon(12% 0, 100% 0, 100% 100%, 0% 100%)' }}
           transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
           <img src="/hero.jpeg" alt="Andrea Maria" className="hero-image-fill" />
