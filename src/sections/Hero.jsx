@@ -69,7 +69,7 @@ export default function Hero() {
           {/* CTA */}
           <motion.div variants={item}>
             <StarButton onClick={() => window.open('https://calendly.com/andreamaria/kostenloseserstgespraech?month=2026-04', '_blank', 'noopener,noreferrer')} className="star-btn--full hero-cta-btn">
-              Kostenloses Erstgespräch buchen
+              Jetzt kostenlos kennenlernen
             </StarButton>
           </motion.div>
 
@@ -77,17 +77,17 @@ export default function Hero() {
           <motion.div className="hero-stats" variants={item}>
             <div className="hero-stat" ref={ref50}>
               <span className="hero-stat-number">{count50}+</span>
-              <span className="hero-stat-label">Begleitete Klient:innen</span>
+              <span className="hero-stat-label">Klient:innen</span>
             </div>
             <div className="hero-stat-divider" />
             <div className="hero-stat" ref={ref4}>
               <span className="hero-stat-number">{count4}+</span>
-              <span className="hero-stat-label">Zertifizierungen</span>
+              <span className="hero-stat-label">Zertifikate</span>
             </div>
             <div className="hero-stat-divider" />
             <div className="hero-stat" ref={ref94}>
               <span className="hero-stat-number">{count94}%</span>
-              <span className="hero-stat-label">Spüren Veränderung</span>
+              <span className="hero-stat-label">Veränderung</span>
             </div>
           </motion.div>
 
