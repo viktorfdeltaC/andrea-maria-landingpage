@@ -15,12 +15,12 @@ const faqs = [
     a: 'Skepsis ist gesund – und oft ein Zeichen von Intelligenz! Viele meiner Klient:innen starten mit Zweifel. Wichtig ist nicht, "daran zu glauben", sondern offen zu sein für eine Erfahrung.',
   },
   {
-    q: 'Kann ich auch online teilnehmen?',
-    a: 'Ja, gerne! Die Aktiv Hypnose funktioniert hervorragend online – viele Klient:innen schätzen sogar die Vertrautheit der eigenen Umgebung. Du brauchst nur eine ruhige, ungestörte Umgebung und eine stabile Internetverbindung.',
+    q: 'Findet die Session nur persönlich statt?',
+    a: 'Ja – die Aktiv Hypnose findet ausschließlich persönlich in Schwabmünchen statt. Der geschützte, physische Raum ist ein wichtiger Teil der Methode. Er gibt dir die Sicherheit, dich wirklich fallen zu lassen. Das Erstgespräch kann telefonisch stattfinden.',
   },
   {
     q: 'Was kostet eine Session und was ist inbegriffen?',
-    a: 'Eine vollständige Aktiv Hypnose Session kostet 390 € – inklusive kostenloses Erstgespräch (20 Min.), der 2,5-stündigen Tiefen-Session, einer Audio-Aufnahme zum Nachhören sowie Integrations-Impulsen für den Alltag. Keine versteckten Kosten. Ratenzahlung ist auf Anfrage möglich.',
+    a: 'Eine vollständige Aktiv Hypnose Session kostet 390 € – inklusive kostenloses Erstgespräch (20 Min.), der 2,5-stündigen Tiefen-Session, schriftlichen Integrations-Impulsen für den Alltag. Keine versteckten Kosten. Ratenzahlung ist auf Anfrage möglich.',
   },
   {
     q: 'Wie viele Sessions brauche ich?',

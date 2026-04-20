@@ -47,7 +47,7 @@ export default function Hero() {
           {/* Badge */}
           <motion.span className="hero-badge" variants={item}>
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Zertifiziert · Online & Vor Ort
+            Zertifiziert · Persönlich in Schwabmünchen
           </motion.span>
 
           {/* Headline */}
@@ -61,9 +61,9 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p className="hero-subtitle" variants={item}>
-            Hypnose-Coaching in Schwabmünchen & online – aktiv, bewusst und
-            nachhaltig. Nach der David Woods Methode. Auch erreichbar aus
-            Augsburg, Kaufbeuren und Landsberg.
+            Hypnose-Coaching in Schwabmünchen – aktiv, bewusst und
+            nachhaltig. Nach der David Woods Methode. Erreichbar aus
+            Augsburg, Kaufbeuren und dem Allgäu.
           </motion.p>
 
           {/* CTA */}
@@ -103,7 +103,7 @@ export default function Hero() {
             </span>
             <span className="hero-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.38 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Online & Vor Ort
+              Persönlich in Schwabmünchen
             </span>
           </motion.footer>
         </div>
