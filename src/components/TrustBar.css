@@ -1,0 +1,107 @@
+.trust-bar {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Faint diagonal grain overlay */
+.trust-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 6px,
+    rgba(255,255,255,0.018) 6px,
+    rgba(255,255,255,0.018) 7px
+  );
+  pointer-events: none;
+}
+
+/* ── Shared item style ── */
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+/* Dot separator between items */
+.trust-item::after {
+  content: '·';
+  position: absolute;
+  right: -2px;
+  color: rgba(255,255,255,0.25);
+  font-size: 1rem;
+}
+
+.trust-item:last-child::after { display: none; }
+
+.trust-item svg {
+  width: 13px;
+  height: 13px;
+  fill: var(--color-accent-light);
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ── DESKTOP: static centered row ── */
+.trust-bar-static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0.85rem var(--spacing-md);
+}
+
+.trust-bar-marquee { display: none; }
+
+/* ── MOBILE: infinite marquee ── */
+@media (max-width: 900px) {
+  .trust-bar-static { display: none; }
+  .trust-bar-marquee { display: block; }
+
+  .trust-bar-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0.85rem 0;
+    animation: marquee 28s linear infinite;
+  }
+
+  .trust-bar:hover .trust-bar-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Edge fades on mobile */
+@media (max-width: 900px) {
+  .trust-bar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right,  var(--color-primary) 0%,  transparent 5%,  transparent 95%, var(--color-primary) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-bar-track { animation: none; }
+}

@@ -4,6 +4,7 @@ import { useAnimateOnScroll } from './hooks/useAnimateOnScroll'
 
 import Header       from './components/Header'
 import Footer       from './components/Footer'
+import TrustBar     from './components/TrustBar'
 import Hero         from './sections/Hero'
 import Problem      from './sections/Problem'
 import Solution     from './sections/Solution'
@@ -47,6 +48,7 @@ export default function App() {
 
       <main id="main">
         <Hero />
+        <TrustBar />
         <Problem />
         <Solution />
         <About />
