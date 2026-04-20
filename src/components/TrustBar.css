@@ -19,6 +19,23 @@
     rgba(255,255,255,0.018) 7px
   );
   pointer-events: none;
+  z-index: 0;
+}
+
+/* Edge fades */
+.trust-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right,
+      var(--color-primary) 0%,
+      transparent 6%,
+      transparent 94%,
+      var(--color-primary) 100%
+    );
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* ── Shared item style ── */
@@ -32,11 +49,10 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   white-space: nowrap;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   position: relative;
 }
 
-/* Dot separator between items */
 .trust-item::after {
   content: '·';
   position: absolute;
@@ -44,8 +60,6 @@
   color: rgba(255,255,255,0.25);
   font-size: 1rem;
 }
-
-.trust-item:last-child::after { display: none; }
 
 .trust-item svg {
   width: 13px;
@@ -55,33 +69,25 @@
   opacity: 0.85;
 }
 
-/* ── DESKTOP: static centered row ── */
-.trust-bar-static {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 0.85rem var(--spacing-md);
+/* ── Static hidden, marquee always ── */
+.trust-bar-static { display: none; }
+
+.trust-bar-marquee {
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
-.trust-bar-marquee { display: none; }
+.trust-bar-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 0.85rem 0;
+  animation: marquee 32s linear infinite;
+}
 
-/* ── MOBILE: infinite marquee ── */
-@media (max-width: 900px) {
-  .trust-bar-static { display: none; }
-  .trust-bar-marquee { display: block; }
-
-  .trust-bar-track {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    padding: 0.85rem 0;
-    animation: marquee 28s linear infinite;
-  }
-
-  .trust-bar:hover .trust-bar-track {
-    animation-play-state: paused;
-  }
+.trust-bar:hover .trust-bar-track {
+  animation-play-state: paused;
 }
 
 @keyframes marquee {
@@ -89,19 +95,7 @@
   100% { transform: translateX(-50%); }
 }
 
-/* Edge fades on mobile */
-@media (max-width: 900px) {
-  .trust-bar::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(to right,  var(--color-primary) 0%,  transparent 5%,  transparent 95%, var(--color-primary) 100%);
-    pointer-events: none;
-    z-index: 1;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .trust-bar-track { animation: none; }
 }
+
