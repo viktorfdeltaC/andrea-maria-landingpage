@@ -241,8 +241,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--color-accent); 
   p  { font-size: 1rem; }
   .section-intro { font-size: 1.05rem; }
   .sticky-cta { display: block; }
-  body { padding-bottom: 80px; }
-  .back-to-top { bottom: 96px; right: 16px; width: 44px; height: 44px; }
+  body { padding-bottom: 90px; } /* matches 56px btn + 2×17px padding */
+  .back-to-top { bottom: 100px; right: 16px; width: 44px; height: 44px; }
 
   /* Convert horizontal animations to vertical on mobile to prevent overflow-x */
   .animate-from-left,

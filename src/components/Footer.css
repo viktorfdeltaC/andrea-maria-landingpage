@@ -76,7 +76,10 @@
 
 @media (max-width: 768px) {
   .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+  .footer-logo { justify-content: center; }
+  .footer-social { justify-content: center; }
   .footer-links a:hover { padding-left: 0; }
+  .footer-links li { white-space: normal; word-break: break-word; }
   .footer-bottom { font-size: 0.8rem; }
   .footer-bottom a { display: inline-block; margin: 0.2rem var(--spacing-xs); }
 }
