@@ -225,18 +225,20 @@ a.hero-contact-item:hover {
   .hero-badge { font-size: 0.68rem; padding: 0.4rem 0.75rem; }
   .hero-subtitle { font-size: 0.95rem; }
 
-  /* Stats: stack vertically, dividers go horizontal */
+  /* Stats: stay horizontal, just scale down */
   .hero-stats {
-    flex-direction: column;
-    gap: 0;
-    padding: 0.75rem 1.25rem;
+    flex-direction: row;
     max-width: 100%;
+    padding: 0.65rem 0;
   }
-  .hero-stat { padding: 0.6rem 0; }
+  .hero-stat { padding: 0 0.5rem; gap: 2px; }
+  .hero-stat-number { font-size: 1.4rem; }
+  .hero-stat-label { font-size: 0.58rem; max-width: 72px; }
   .hero-stat-divider {
-    width: 40px; height: 1px;
-    align-self: center;
-    margin: 0;
+    width: 1px;
+    height: auto;
+    align-self: stretch;
+    margin: 0.3rem 0;
   }
 
   /* Contact: allow wrapping on tiny screens */
