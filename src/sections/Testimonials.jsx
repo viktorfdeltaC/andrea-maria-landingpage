@@ -18,10 +18,10 @@ const reviews = [
     color: '#B8965B',
   },
   {
-    text: 'Ich schlief seit zwei Jahren schlecht, war tagsüber erschöpft und funktionierte nur noch. Heute, drei Monate nach der Online-Session, schlafe ich durch und habe wieder Energie für die Dinge, die mir wichtig sind.',
+    text: 'Ich schlief seit zwei Jahren schlecht, war tagsüber erschöpft und funktionierte nur noch. Heute, drei Monate nach meiner Session bei Andrea, schlafe ich durch und habe wieder Energie für die Dinge, die mir wichtig sind.',
     author: 'L.',
     age: '29',
-    role: 'nach Online-Begleitung',
+    role: 'nach Schlaf-Session',
     initials: 'L',
     color: '#C9968A',
   },
