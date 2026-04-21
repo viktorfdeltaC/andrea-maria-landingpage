@@ -123,6 +123,8 @@ export default function CTA() {
                   <option value="Angst">Angst &amp; Panik</option>
                   <option value="Selbstwert">Selbstwert &amp; Blockaden</option>
                   <option value="Schlaf">Schlaf &amp; Erschöpfung</option>
+                  <option value="Gewicht">Gewichtsreduzierung &amp; Gesunde Ernährung</option>
+                  <option value="Trauma">Tiefe Themen &amp; Traumata</option>
                   <option value="Anderes">Anderes</option>
                 </select>
               </div>
