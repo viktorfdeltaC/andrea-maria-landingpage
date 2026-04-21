@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Hilft das auch, wenn ich skeptisch bin?',
-    a: 'Skepsis ist gesund – und oft ein Zeichen von Intelligenz! Viele meiner Klient:innen starten mit Zweifel. Wichtig ist nicht, "daran zu glauben", sondern offen zu sein für eine Erfahrung.',
+    a: 'Skepsis ist völlig in Ordnung – aber ehrlich gesagt: Hypnose funktioniert am besten, wenn du bereit bist, dich wirklich darauf einzulassen. Du musst nicht "daran glauben" – aber du brauchst die Bereitschaft, den Prozess zuzulassen, ohne ihn ständig zu analysieren oder zu kontrollieren. Wer innerlich blockiert oder völlig ablehnend ist, wird weniger von der Session profitieren. Im kostenlosen Erstgespräch klären wir gemeinsam, ob du gerade in dem richtigen Raum dafür bist.',
   },
   {
     q: 'Findet die Session nur persönlich statt?',
