@@ -11,8 +11,8 @@ const faqs = [
     a: 'Diese Sorge ist völlig verständlich – und ein wichtiger Teil unseres Erstgesprächs. Bei Aktiv Hypnose gibt es keinen Kontrollverlust: Du bestimmst das Tempo, du entscheidest, wie tief wir gehen.',
   },
   {
-    q: 'Hilft das auch, wenn ich skeptisch bin?',
-    a: 'Skepsis ist völlig in Ordnung – aber ehrlich gesagt: Hypnose funktioniert am besten, wenn du bereit bist, dich wirklich darauf einzulassen. Du musst nicht "daran glauben" – aber du brauchst die Bereitschaft, den Prozess zuzulassen, ohne ihn ständig zu analysieren oder zu kontrollieren. Wer innerlich blockiert oder völlig ablehnend ist, wird weniger von der Session profitieren. Im kostenlosen Erstgespräch klären wir gemeinsam, ob du gerade in dem richtigen Raum dafür bist.',
+    q: 'Brauche ich besondere Voraussetzungen?',
+    a: 'Alles, was du mitbringen musst, ist gesunde Neugier und die Bereitschaft, dich auf den Prozess einzulassen. Du musst nicht "daran glauben" – aber du brauchst die Offenheit, den Prozess zuzulassen, ohne ihn ständig zu analysieren oder zu kontrollieren. Wer innerlich bereit ist, sich zu öffnen, wird die volle Wirkung erleben. Im kostenlosen Erstgespräch klären wir gemeinsam, ob du gerade in dem richtigen Raum dafür bist.',
   },
   {
     q: 'Findet die Session nur persönlich statt?',
