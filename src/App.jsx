@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './styles/global.css'
 import { useAnimateOnScroll } from './hooks/useAnimateOnScroll'
 
@@ -77,6 +78,8 @@ export default function App() {
       >
         <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
       </button>
+
+      <Analytics />
     </>
   )
 }
