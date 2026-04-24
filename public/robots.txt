@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hypnose.andreamariacoaching.de/sitemap.xml
+Sitemap: https://hypnose.andreamariacoaching.com/sitemap.xml
